@@ -1,22 +1,293 @@
 @charset "UTF-8";
-@use 'settings' as *;
-@use 'utility' as *;
-@use 'core' as *;
+@use "settings" as *;
+@use "utility" as *;
+@use "core" as *;
 
 // --------------------------------------------------
 // Header
 // --------------------------------------------------
-header {}
+header {
+  position: absolute;
+
+  .h-wrap {
+    .logo-box {
+      padding: 25px;
+      & > a {
+        & > img {
+          width: 100px;
+        }
+        @media only screen and (min-width: $screen-pc-min) {
+          transition: 0.3s;
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+}
+
+.slide-menu-btn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: $primary;
+  z-index: 100;
+  cursor: pointer;
+  & > .bdr-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 18px;
+    & > span {
+      width: 100%;
+      height: 2px;
+      display: block;
+      background: #f5f5f5;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      transform-origin: center;
+      transition: 0.3s;
+      &:nth-of-type(1) {
+        transform: translateY(-8px);
+      }
+      &:nth-of-type(3) {
+        transform: translateY(8px);
+      }
+    }
+  }
+  body.open & {
+    & > .bdr-box {
+      & > span {
+        &:nth-of-type(1) {
+          transform: rotate(45deg);
+        }
+        &:nth-of-type(2) {
+          opacity: 0;
+        }
+        &:nth-of-type(3) {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
 
 // --------------------------------------------------
 // Key-visual
 // --------------------------------------------------
-.key-visual {}
+.key-visual {
+  margin-bottom: 120px;
+  &.-top {
+    .key-img {
+      width: 100%;
+      height: 100svh;
+      position: relative;
+      .img-box {
+        position: absolute;
+        opacity: 0;
+        &.-first {
+          width: 36%;
+          right: 48%;
+          height: 38svh;
+          bottom: 48svh;
+        }
+        &.-next {
+          width: 43%;
+          height: 100%;
+          top: 0;
+          right: 0;
+        }
+        &.-third {
+          width: 52%;
+          height: 40svh;
+          left: 0;
+          bottom: 0;
+        }
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .key-txt {
+      position: absolute;
+      top: calc(100% - 200px);
+      right: 0;
+      background: #fff;
+      writing-mode: vertical-rl;
+      max-width: 340px;
+      width: calc(100% - 40px);
+      height: 440px;
+      padding: 50px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: 1s;
+      & > h2 {
+        font-size: 2.8rem;
+        letter-spacing: 0.3em;
+        line-height: 1.6;
+        margin-left: 30px;
+      }
+      & > .sub-txt {
+        line-height: 2;
+        letter-spacing: 0.3em;
+      }
+    }
+    &.-animation {
+      .key-img {
+        .img-box {
+          opacity: 1;
+          transition: 1s;
+
+          &.-next {
+            transition-delay: 0.3s;
+          }
+          &.-third {
+            transition-delay: 0.6s;
+          }
+        }
+      }
+      .key-txt {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.9s;
+      }
+    }
+    @media only screen and (max-width: $screen-tb) {
+      margin-bottom: 50px;
+      .key-img {
+        .img-box {
+          &.-next {
+            width: 50%;
+            height: 50svh;
+          }
+          &.-first {
+            height: 13svh;
+            bottom: 50%;
+            right: 56%;
+          }
+          &.-third {
+            left: unset;
+            right: 0;
+            width: 100%;
+            height: 25svh;
+            top: 53%;
+            bottom: unset;
+          }
+        }
+      }
+      .key-txt {
+        top: 100%;
+        height: auto;
+        writing-mode: unset;
+        position: static;
+        padding: 30px 20px;
+        margin: -17svh auto 0;
+        h2 {
+          font-size: 2rem;
+          margin-left: 0;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
 
 // --------------------------------------------------
 // メニューバー
 // --------------------------------------------------
-.slide-menu {}
+.slide-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  bottom: 0;
+  background: #fff;
+  width: 300px;
+  z-index: 99;
+  padding: 80px 30px;
+  overflow: auto;
+  transition: 0.3s;
+  & > .nav-list {
+    ul {
+      border-bottom: 1px solid $secondary;
+      & > li {
+        border-top: 1px solid $secondary;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        padding: 15px 10px;
+        & > a {
+          font-size: 0;
+          text-indent: -100%;
+          overflow: hidden;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        & > .jp-ttl {
+          font: {
+            size: 1.8rem;
+          }
+        }
+        & > .en-ttl {
+          font: {
+            size: 1.3rem;
+            family: $f-lora;
+          }
+          color: $secondary;
+          margin-left: 20px;
+        }
+        &:after {
+          content: "\f105";
+          font: {
+            size: 14px;
+            weight: 900;
+            family: $f-fa;
+          }
+          position: absolute;
+          top: 50%;
+          right: 15px;
+          transform: translateY(-50%);
+          transition: 0.3s;
+        }
+        &:hover {
+          &:after {
+            right: 10px;
+          }
+        }
+      }
+    }
+  }
+  body.open & {
+    right: 0;
+  }
+}
+.slide-bg-box {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 98;
+  background: rgba(#000, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  body.open & {
+    opacity: 1;
+    visibility: visible;
+  }
+}
 
 // --------------------------------------------------
 // Body
@@ -25,19 +296,24 @@ header {}
 body {
   width: 100%;
   text-align: justify;
+  background: url("img/common/body_bg01.jpg") repeat left top;
+  &.open {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
 }
 
 // --------------------------------------------------
 // Side
 // --------------------------------------------------
 
-
 // --------------------------------------------------
 // Page
 // --------------------------------------------------
 
-
 // --------------------------------------------------
 // Footer
 // --------------------------------------------------
-footer {}
+footer {
+}

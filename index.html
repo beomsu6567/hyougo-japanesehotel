@@ -25,21 +25,21 @@
 
     <!-- ↓画像↓-->
     <link rel="icon" href="img/favicon/favicon16x16.png" sizes="16x16" type="image/png" />
-    <link rel="icon" href="img/favicon/favicon16x16.png" sizes="32x32" type="image/png" />
-    <link rel="icon" href="img/favicon/favicon16x16.png" sizes="48x48" type="image/png" />
-    <link rel="icon" href="img/favicon/favicon16x16.png" sizes="62x62" type="image/png" />
-    <link rel="icon" href="img/favicon/favicon16x16.png" sizes="96x96" type="image/png" />
-    <link rel="icon" href="img/favicon/favicon16x16.png" sizes="144x144" type="image/png" />
-    <link rel="icon" href="img/favicon/favicon16x16.png" sizes="150x150" type="image/png" />
-    <link rel="icon" href="img/favicon/favicon16x16.png" sizes="180x180" type="image/png" />
-    <link rel="icon" href="img/favicon/favicon16x16.png" sizes="256x256" type="image/png" />
+    <link rel="icon" href="img/favicon/favicon32x32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="img/favicon/favicon48x48.png" sizes="48x48" type="image/png" />
+    <link rel="icon" href="img/favicon/favicon62x62.png" sizes="62x62" type="image/png" />
+    <link rel="icon" href="img/favicon/favicon96x96.png" sizes="96x96" type="image/png" />
+    <link rel="icon" href="img/favicon/favicon144x144.png" sizes="144x144" type="image/png" />
+    <link rel="icon" href="img/favicon/favicon150x150.png" sizes="150x150" type="image/png" />
+    <link rel="icon" href="img/favicon/favicon180x180.png" sizes="180x180" type="image/png" />
+    <link rel="icon" href="img/favicon/favicon256x256.png" sizes="256x256" type="image/png" />
 
     <!-- 150 * 150 -->
-    <link rel="apple-touch-icon-precomposed" href="画像のURL" />
+    <link rel="apple-touch-icon-precomposed" href="img/favicon/favicon150x150.png" />
 
     <!-- Windows用タイル設定 -->
     <!-- 144*144 -->
-    <meta name="msapplication-TileImage" content="画像のURL" />
+    <meta name="msapplication-TileImage" content="img/favicon/favicon144x144.png" />
     <meta name="msapplication-TileColor" content="#FFF" />
     <!-- ↑画像↑ -->
 
@@ -79,6 +79,11 @@
       <nav class="nav-list">
         <ul>
           <li>
+            <a href="#">トップに戻る</a>
+            <p class="jp-ttl">トップペーじ</p>
+            <p class="en-ttl">TOP</p>
+          </li>
+          <li>
             <a href="#link01">ご予約</a>
             <p class="jp-ttl">ご予約</p>
             <p class="en-ttl">BOOKING</p>
@@ -106,219 +111,214 @@
         </ul>
       </nav>
     </div>
-    <div id="luxy">
-      <div class="key-visual -top">
-        <div class="key-img">
-          <div class="img-box -first">
-            <img src="img/page/index/key01.jpg" alt="施設の写真1" />
-          </div>
-          <div class="img-box -next">
-            <img src="img/page/index/key01.jpg" alt="施設の写真2" />
-          </div>
-          <div class="img-box -third">
-            <img src="img/page/index/key01.jpg" alt="施設の写真3" />
-          </div>
+    <div class="slide-bg-box"><!--  --></div>
+    <div class="key-visual -top">
+      <div class="key-img">
+        <div class="img-box -first">
+          <img src="img/page/index/key01.jpg" alt="施設の写真1" />
         </div>
-        <div class="key-txt">
-          <h2>
-            ゆったりした一日を<br />
-            兵庫旅館で
-          </h2>
-          <p class="sub-txt">
-            忙しい日常生活に疲れていませんか。<br />
-            兵庫旅館で非日常を味わいながら<br />
-            ゆったりした一日を過ごしてみるのは<br />
-            いかがでしょうか
-          </p>
+        <div class="img-box -next">
+          <img src="img/page/index/key02.jpg" alt="施設の写真2" />
+        </div>
+        <div class="img-box -third">
+          <img src="img/page/index/key03.jpg" alt="施設の写真3" />
         </div>
       </div>
-      <main>
-        <div class="top-index-content">
-          <div class="first-img">
-            <div class="img-box">
-              <img src="img/page/index/img01.jpg" alt="" />
-            </div>
+      <div class="key-txt">
+        <h2>
+          ゆったりした一日を<br />
+          兵庫旅館で
+        </h2>
+        <p class="sub-txt">
+          忙しい日常生活に疲れていませんか。<br />
+          兵庫旅館で非日常を味わいながら<br class="pc" />ゆったりした一日を過ごしてみるのは<br class="pc" />いかがでしょうか
+        </p>
+      </div>
+    </div>
+    <main>
+      <div class="top-index-content">
+        <div class="first-img">
+          <div class="img-box">
+            <img src="img/page/index/img01.jpg" alt="" />
           </div>
         </div>
-        <div class="container">
-          <section id="link01" class="sec-box">
-            <div class="ttl-box">
-              <h3 class="top">ご予約</h3>
-              <p class="en-main-ttl -vertical">BOOKING</p>
-            </div>
-            <div class="content-box">
-              <form action="#" method="get">
-                <div class="item-box">
-                  <label for="checkin">チェックイン</label>
-                  <input type="text" name="checkin" id="checkin" />
-                </div>
-                <div class="item-box">
-                  <label for="checkout">チェックアウト</label>
-                  <input type="text" name="checkout" id="checkout" />
-                </div>
-                <div class="item-box">
-                  <label for="peopleNum">人数</label>
-                  <select name="peopleNum" id="peopleNum">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                  </select>
-                </div>
-              </form>
-            </div>
-          </section>
-          <section class="sec-box -change">
-            <div class="ttl-box">
-              <h3 class="top">お知らせ</h3>
-              <p class="en-main-ttl -vertical">NEWS</p>
-            </div>
-            <div class="content-box">
-              <ul class="news-list">
-                <li>
-                  <time datetime="2025-02-07">2025.02.07</time>
-                  <a href="news_detail.html">お知らせの内容が入ります。お知らせの内容が入ります。お知らせの内容が入ります。お知らせの内容が入ります。</a>
-                </li>
-                <li>
-                  <time datetime="2025-02-07">2025.02.07</time>
-                  <a href="news_detail.html">お知らせの内容が入ります。お知らせの内容が入ります。お知らせの内容が入ります。お知らせの内容が入ります。</a>
-                </li>
-                <li>
-                  <time datetime="2025-02-07">2025.02.07</time>
-                  <a href="news_detail.html">お知らせの内容が入ります。お知らせの内容が入ります。お知らせの内容が入ります。お知らせの内容が入ります。</a>
-                </li>
-              </ul>
-              <div class="btn-box">
-                <a href="news_index.html" class="button02">お知らせ一覧へ</a>
+      </div>
+      <div class="container">
+        <section id="link01" class="sec-box">
+          <div class="ttl-box">
+            <h3 class="top">ご予約</h3>
+            <p class="en-main-ttl -vertical">BOOKING</p>
+          </div>
+          <div class="content-box">
+            <form class="search-box" action="#" method="get">
+              <div class="item-box">
+                <label for="checkin">チェックイン</label>
+                <input type="text" name="checkin" id="checkin" value="2025/02/07" />
               </div>
-            </div>
-          </section>
-        </div>
-        <section id="link02" class="sec-box">
-          <div class="top-about">
-            <div class="container">
-              <div class="txt-box">
-                <h3 class="top">兵庫旅館は</h3>
-                <p class="txt">
-                  2025年2月に設立された<br />
-                  新しい旅館です。<br />
-                  日本の伝統的な美しさと<br />
-                  融合した空間が広がっています。<br />
-                  古き良き時代の魅力と現代の<br />
-                  快適さが絶妙に組み合わさった、<br />
-                  城崎温泉での特別な滞在を<br />
-                  お約束します。
-                </p>
+              <div class="item-box">
+                <label for="checkout">チェックアウト</label>
+                <input type="text" name="checkout" id="checkout" value="2025/02/08" />
               </div>
-            </div>
-            <div class="r-box">
-              <div class="img-box">
-                <img src="img/page/index/img02.jpg" alt="兵庫旅館は" />
+              <div class="item-box">
+                <label for="peopleNum">人数</label>
+                <select name="peopleNum" id="peopleNum">
+                  <option value="1">1</option>
+                  <option value="2" selected>2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
               </div>
-            </div>
+              <div class="item-box">
+                <button class="button01" type="submit">検索</button>
+              </div>
+            </form>
           </div>
         </section>
-        <section id="link03" class="sec-box">
-          <h3>お部屋</h3>
-          <p class="en-main-ttl">ROOM</p>
-          <div class="room-content">
-            <div class="item">
-              <div class="img-box">
-                <img src="img/page/index/img03.jpg" alt="和室1" />
-              </div>
-              <div class="txt-box">
-                <p class="en-ttl">TYPE</p>
-                <p class="ttl">和室1</p>
-              </div>
-            </div>
-            <div class="item">
-              <div class="img-box">
-                <img src="img/page/index/img04.jpg" alt="和室2" />
-              </div>
-              <div class="txt-box">
-                <p class="en-ttl">TYPE</p>
-                <p class="ttl">和室2</p>
-              </div>
-            </div>
+        <section class="sec-box -change">
+          <div class="ttl-box">
+            <h3 class="top">お知らせ</h3>
+            <p class="en-main-ttl -vertical">NEWS</p>
           </div>
-        </section>
-        <div class="container">
-          <section id="link04" class="sec-box">
-            <div class="ttl-box">
-              <h3 class="top">お食事</h3>
-              <p class="en-main-ttl -vertical">MEAL</p>
-            </div>
-          </section>
-        </div>
-        <div class="meal-content">
-          <div class="top-img-box">
-            <div class="img-box">
-              <img src="img/page/index/img05.jpg" alt="山盛り天ぷら１０種類" />
-            </div>
-            <div class="img-box">
-              <img src="img/page/index/img06.jpg" alt="刺身３種類" />
-            </div>
-            <div class="img-box">
-              <img src="img/page/index/img07.jpg" alt="生牡蠣 2個" />
-            </div>
-          </div>
-          <div class="txt-box">
-            <h3>和食コース</h3>
-            <ul class="course-list">
-              <li>デザート</li>
-              <li>フグ鍋</li>
-              <li>山盛り天ぷら１０種類</li>
-              <li>刺身３種類</li>
-              <li>生牡蠣 2個</li>
-              <li>前菜</li>
+          <div class="content-box">
+            <ul class="news-list mb20">
+              <li>
+                <time datetime="2025-02-07">2025.02.07</time>
+                <a href="news_detail.html">お知らせの内容が入ります。お知らせの内容が入ります。お知らせの内容が入ります。お知らせの内容が入ります。</a>
+              </li>
+              <li>
+                <time datetime="2025-02-07">2025.02.07</time>
+                <a href="news_detail.html">お知らせの内容が入ります。お知らせの内容が入ります。お知らせの内容が入ります。お知らせの内容が入ります。</a>
+              </li>
+              <li>
+                <time datetime="2025-02-07">2025.02.07</time>
+                <a href="news_detail.html">お知らせの内容が入ります。</a>
+              </li>
             </ul>
+            <div class="right-text-tb">
+              <a href="news_index.html" class="button02">お知らせ一覧へ</a>
+            </div>
           </div>
-          <div class="bt-img-box">
-            <div class="img-box">
-              <img src="img/page/index/img08.jpg" alt="フグ鍋" />
+        </section>
+      </div>
+      <section id="link02" class="sec-box">
+        <div class="top-about">
+          <div class="l-box">
+            <div class="txt-box">
+              <h3 class="top mb20-tb">兵庫旅館は</h3>
+              <p class="txt">
+                2025年2月に設立された<br class="pc" />新しい旅館です。<br />
+                日本の伝統的な美しさと<br class="pc" />融合した空間が広がっています。<br />
+                古き良き時代の魅力と現代の<br class="pc" />快適さが絶妙に組み合わさった、<br class="pc" />城崎温泉での特別な滞在を<br class="pc" />お約束します。
+              </p>
             </div>
+          </div>
+          <div class="r-box">
             <div class="img-box">
-              <img src="img/page/index/img09.jpg" alt="デザート" />
-            </div>
-            <div class="img-box">
-              <img src="img/page/index/img10.jpg" alt="前菜" />
+              <img src="img/page/index/img02.jpg" alt="兵庫旅館は" />
             </div>
           </div>
         </div>
-        <section id="link04" class="top-spa">
-          <div class="first-img">
+      </section>
+      <section id="link03" class="top-room">
+        <h3 class="mb5">お部屋</h3>
+        <p class="en-main-ttl mb60">ROOM</p>
+        <div class="room-content">
+          <div class="item">
+            <div class="img-box">
+              <img src="img/page/index/img03.jpg" alt="和室1" />
+            </div>
+            <div class="txt-box">
+              <p class="en-ttl">TYPE</p>
+              <p class="ttl">和室1</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="img-box">
+              <img src="img/page/index/img04.jpg" alt="和室2" />
+            </div>
+            <div class="txt-box">
+              <p class="en-ttl">TYPE</p>
+              <p class="ttl">和室2</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <section id="link04" class="sec-box">
+          <div class="ttl-box">
+            <h3 class="top">お食事</h3>
+            <p class="en-main-ttl -vertical">MEAL</p>
+          </div>
+        </section>
+      </div>
+      <div class="meal-content">
+        <div class="top-img-box">
+          <div class="img-box">
+            <img src="img/page/index/img05.jpg" alt="山盛り天ぷら１０種類" />
+          </div>
+          <div class="img-box">
+            <img src="img/page/index/img06.jpg" alt="刺身３種類" />
+          </div>
+          <div class="img-box">
+            <img src="img/page/index/img07.jpg" alt="生牡蠣 2個" />
+          </div>
+        </div>
+        <div class="txt-box">
+          <h3>和食コース</h3>
+          <ul class="course-list">
+            <li>デザート</li>
+            <li>フグ鍋</li>
+            <li>山盛り天ぷら１０種類</li>
+            <li>刺身３種類</li>
+            <li>生牡蠣 2個</li>
+            <li>前菜</li>
+          </ul>
+        </div>
+        <div class="bt-img-box">
+          <div class="img-box">
+            <img src="img/page/index/img08.jpg" alt="フグ鍋" />
+          </div>
+          <div class="img-box">
+            <img src="img/page/index/img09.jpg" alt="デザート" />
+          </div>
+          <div class="img-box">
+            <img src="img/page/index/img10.jpg" alt="前菜" />
+          </div>
+        </div>
+      </div>
+      <section id="link04" class="top-spa">
+        <div class="first-img">
+          <img src="img/page/index/img11.jpg" alt="温泉" />
+        </div>
+        <div class="txt-box">
+          <h3 class="top">温泉</h3>
+          <p class="en-main-ttl -vertical">SPA</p>
+        </div>
+        <div class="spa-img-box">
+          <div class="img-box -first">
             <img src="img/page/index/img11.jpg" alt="温泉" />
           </div>
-          <div class="txt-box">
-            <h3 class="top">温泉</h3>
-            <p class="en-main-ttl -vertical">SPA</p>
+          <div class="img-box -next">
+            <img src="img/page/index/img12.jpg" alt="温泉" />
           </div>
-          <div class="spa-img-box">
-            <div class="img-box -first">
-              <img src="img/page/index/img11.jpg" alt="温泉" />
-            </div>
-            <div class="img-box -next">
-              <img src="img/page/index/img12.jpg" alt="温泉" />
-            </div>
-          </div>
-          <div class="txt-box">
-            <h3 class="top">温泉</h3>
-            <p class="txt">
-              悠久の厳しくも<br />
-              優しい自然の恵みの<br />
-              最たるものが<br />
-              こんこんと湧き出る温泉<br />
-              大地の恩恵に身を委ね<br />
-              体と心を開放する滞在へ<br />
-              まあるい肌当たりの<br />
-              お湯が誘います
-            </p>
-          </div>
-        </section>
-      </main>
-    </div>
+        </div>
+        <div class="txt-box">
+          <h3 class="top">温泉</h3>
+          <p class="txt">
+            悠久の厳しくも<br />
+            優しい自然の恵みの<br />
+            最たるものが<br />
+            こんこんと湧き出る温泉<br />
+            大地の恩恵に身を委ね<br />
+            体と心を開放する滞在へ<br />
+            まあるい肌当たりの<br />
+            お湯が誘います
+          </p>
+        </div>
+      </section>
+    </main>
     <footer>
       <div class="f-wrap">
         <div class="l-box">
@@ -370,5 +370,10 @@
       </div>
       <p class="copy">©︎ HYOUGO RYOKAN</p>
     </footer>
+    <script>
+      window.onload = function () {
+        $(".key-visual.-top").addClass("-animation");
+      };
+    </script>
   </body>
 </html>

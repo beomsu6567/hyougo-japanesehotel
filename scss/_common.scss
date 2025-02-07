@@ -1,38 +1,181 @@
 @charset "UTF-8";
-@use 'settings' as *;
-@use 'utility' as *;
-@use 'core' as *;
-
+@use "settings" as *;
+@use "utility" as *;
+@use "core" as *;
 
 // --------------------------------------------------
 // ボタン
 // --------------------------------------------------
-.button01 {}
+.button01 {
+  text: {
+    decoration: none;
+    align: center;
+  }
+  color: #fff;
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+  background: $primary;
+  padding: 13px 20px;
+  @media only screen and (min-width: $screen-pc-min) {
+    transition: 0.3s;
+    &:hover {
+      background: $secondary;
+    }
+  }
+}
 
-.button02 {}
-
+.button02 {
+  text: {
+    align: left;
+    decoration: none;
+  }
+  display: inline-block;
+  padding-right: 35px;
+  padding: 5px 35px 5px 0;
+  position: relative;
+  &:after {
+    content: "\f105";
+    font: {
+      weight: 900;
+      family: $f-fa;
+    }
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+  @media only screen and (min-width: $screen-pc-min) {
+    &:after {
+      transition: 0.3s;
+    }
+    &:hover {
+      &:after {
+        right: -3px;
+      }
+    }
+  }
+}
 
 // --------------------------------------------------
 // テーブル
 // --------------------------------------------------
-.table01 {}
+.table01 {
+}
 
-.table02 {}
+.table02 {
+}
 
 // --------------------------------------------------
 // 見出し
 // --------------------------------------------------
-h2 {}
+h3 {
+  font-size: 3rem;
+  text-align: center;
+  &.top {
+    text-align: left;
+    letter-spacing: 0.25em;
+    @media only screen and (max-width: $screen-tb) {
+      letter-spacing: 0.1em;
+    }
+  }
+  @media only screen and (max-width: $screen-tb) {
+    font-size: 2.5rem;
+  }
+}
 
-h3 {}
+h4 {
+}
 
-h4 {}
+h5 {
+}
 
-h5 {}
+.en-main-ttl {
+  font-family: $f-lora;
+  color: $secondary;
+  text-align: center;
 
+  &.-vertical {
+    text-align: left;
+    letter-spacing: 0.25em;
+    padding-top: 2px;
+    @media only screen and (max-width: $screen-tb) {
+      letter-spacing: 0.1em;
+      padding-top: 0;
+    }
+  }
+}
 // --------------------------------------------------
 // リスト
 // --------------------------------------------------
-.dot-list {}
+.dot-list {
+}
 
-.num-list {}
+.num-list {
+}
+
+.news-list {
+  border-bottom: 1px solid $secondary;
+  & > li {
+    border-top: 1px solid $secondary;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    & > time {
+      font: {
+        size: 1.3rem;
+      }
+      color: $secondary;
+      display: block;
+      width: 100px;
+    }
+    & > a {
+      text: {
+        decoration: none;
+        overflow: ellipsis;
+      }
+      max-width: calc(100% - 100px);
+      overflow: hidden;
+      white-space: nowrap;
+      display: inline-block;
+      padding: 3px 0;
+      @media only screen and (min-width: $screen-pc-min) {
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 1px;
+          background: $primary;
+          right: 0;
+          bottom: 0;
+          transition: 0.3s;
+        }
+        &:hover {
+          &:before {
+            width: 100%;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-tb) {
+    & > li {
+      flex-wrap: wrap;
+      & > time {
+        width: 100%;
+        margin-bottom: 5px;
+      }
+      & > a {
+        max-width: 100%;
+        padding: 0;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        white-space: unset;
+      }
+    }
+  }
+}
