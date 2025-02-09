@@ -316,4 +316,136 @@ body {
 // Footer
 // --------------------------------------------------
 footer {
+  border-top: 1px solid $secondary;
+  padding: 50px 0 30px;
+  .f-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    .l-box {
+      .logo-box {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        h1 {
+          width: 100px;
+          margin-right: 30px;
+        }
+        .txt-box {
+          & > .page-name {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+          }
+          & > .address-txt {
+            font-size: 1.4rem;
+            color: $secondary;
+          }
+        }
+      }
+      .tel-box {
+        margin-bottom: 30px;
+        & > .tel-ttl {
+          font-size: 1.6rem;
+        }
+        & > .tel {
+          & > a {
+            font-size: 4rem;
+            text-decoration: none;
+            color: $secondary;
+          }
+        }
+      }
+    }
+    .r-box {
+      .nav-list {
+        display: flex;
+        & > * + * {
+          margin-left: 40px;
+        }
+        & > li {
+          text-align: center;
+          width: 17px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: column;
+          & > p {
+            line-height: 1.2;
+            word-break: break-all;
+            &.jp-ttl {
+              font-size: 1.8rem;
+              margin-bottom: 90px;
+              transition: 0.3s;
+            }
+            &.en-ttl {
+              font-family: $f-lora;
+              color: $secondary;
+            }
+          }
+          @media only screen and (min-width: $screen-pc-min) {
+            & > p {
+              &.jp-ttl {
+                transition: 0.3s;
+              }
+            }
+            &:hover {
+              & > p {
+                &.jp-ttl {
+                  color: $secondary;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .copy {
+    font: {
+      size: 1.2rem;
+      family: $f-lora;
+    }
+    color: $secondary;
+    text-align: center;
+  }
+  @media only screen and (max-width: $screen-tb) {
+    .f-wrap {
+      justify-content: center;
+      margin-bottom: 40px;
+      .l-box {
+        .logo-box {
+          flex-wrap: wrap;
+          justify-content: center;
+          h1 {
+            margin-bottom: 30px;
+            margin-right: 0;
+          }
+          .txt-box {
+            width: 100%;
+            text-align: center;
+            .page-name {
+              margin-bottom: 5px;
+            }
+          }
+        }
+        .tel-box {
+          text-align: center;
+          .tel-ttl {
+            font-size: 1.4rem;
+          }
+          .tel {
+            & > a {
+              font-size: 3.2rem;
+            }
+          }
+        }
+      }
+      .r-box {
+        display: none;
+      }
+    }
+    .copy {
+      font-size: 1rem;
+    }
+  }
 }

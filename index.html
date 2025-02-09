@@ -123,6 +123,7 @@
 
   <body>
     <script src="js/jquery.min.js"></script>
+    <script src="js/rellax.min.js"></script>
     <script src="js/common.js"></script>
     <header>
       <div class="h-wrap">
@@ -144,27 +145,27 @@
       <nav class="nav-list">
         <ul>
           <li>
-            <a href="#">トップに戻る</a>
-            <p class="jp-ttl">トップペーじ</p>
+            <a href="index.html#">トップに戻る</a>
+            <p class="jp-ttl">トップページへ</p>
             <p class="en-ttl">TOP</p>
           </li>
           <li>
-            <a href="#link01">ご予約</a>
+            <a href="index.html#link01">ご予約</a>
             <p class="jp-ttl">ご予約</p>
             <p class="en-ttl">BOOKING</p>
           </li>
           <li>
-            <a href="#link02">兵庫旅館は</a>
+            <a href="index.html#link02">兵庫旅館は</a>
             <p class="jp-ttl">兵庫旅館は</p>
             <p class="en-ttl">ABOUT</p>
           </li>
           <li>
-            <a href="#link03">お部屋</a>
+            <a href="index.html#link03">お部屋</a>
             <p class="jp-ttl">お部屋</p>
             <p class="en-ttl">ROOM</p>
           </li>
           <li>
-            <a href="#link04">お食事</a>
+            <a href="index.html#link04">お食事</a>
             <p class="jp-ttl">お食事</p>
             <p class="en-ttl">MEAL</p>
           </li>
@@ -208,7 +209,13 @@
       <div class="top-index-content">
         <div class="first-img">
           <div class="img-box">
-            <img src="img/page/index/img01.jpg" alt="" />
+            <img
+              src="img/page/index/img01.jpg"
+              class="js-rellax"
+              data-rellax-speed="2"
+              data-rellax-percentage="0.5"
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -311,7 +318,13 @@
           </div>
           <div class="r-box">
             <div class="img-box">
-              <img src="img/page/index/img02.jpg" alt="兵庫旅館は" />
+              <img
+                src="img/page/index/img02.jpg"
+                class="js-rellax"
+                data-rellax-speed="-1"
+                data-rellax-percentage="0.5"
+                alt="兵庫旅館は"
+              />
             </div>
           </div>
         </div>
@@ -351,13 +364,31 @@
       <div class="meal-content">
         <div class="top-img-box">
           <div class="img-box">
-            <img src="img/page/index/img05.jpg" alt="山盛り天ぷら１０種類" />
+            <img
+              src="img/page/index/img05.jpg"
+              class="js-rellax"
+              data-rellax-speed="1"
+              data-rellax-percentage="0.5"
+              alt="山盛り天ぷら１０種類"
+            />
           </div>
           <div class="img-box">
-            <img src="img/page/index/img06.jpg" alt="刺身３種類" />
+            <img
+              src="img/page/index/img06.jpg"
+              class="js-rellax"
+              data-rellax-speed="1"
+              data-rellax-percentage="0.5"
+              alt="刺身３種類"
+            />
           </div>
           <div class="img-box">
-            <img src="img/page/index/img07.jpg" alt="生牡蠣 2個" />
+            <img
+              src="img/page/index/img07.jpg"
+              class="js-rellax"
+              data-rellax-speed="2"
+              data-rellax-percentage="0.5"
+              alt="生牡蠣 2個"
+            />
           </div>
         </div>
         <div class="txt-box">
@@ -373,13 +404,31 @@
         </div>
         <div class="bt-img-box">
           <div class="img-box">
-            <img src="img/page/index/img08.jpg" alt="フグ鍋" />
+            <img
+              src="img/page/index/img08.jpg"
+              class="js-rellax"
+              data-rellax-speed="0"
+              data-rellax-percentage="0.5"
+              alt="フグ鍋"
+            />
           </div>
           <div class="img-box">
-            <img src="img/page/index/img09.jpg" alt="デザート" />
+            <img
+              src="img/page/index/img09.jpg"
+              class="js-rellax"
+              data-rellax-speed="1"
+              data-rellax-percentage="0.5"
+              alt="デザート"
+            />
           </div>
           <div class="img-box">
-            <img src="img/page/index/img10.jpg" alt="前菜" />
+            <img
+              src="img/page/index/img10.jpg"
+              class="js-rellax"
+              data-rellax-speed="2"
+              data-rellax-percentage="0.5"
+              alt="前菜"
+            />
           </div>
         </div>
       </div>
@@ -418,57 +467,64 @@
       </section>
     </main>
     <footer>
-      <div class="f-wrap">
-        <div class="l-box">
-          <div class="logo-box">
-            <h1>
-              <a href="index.html">
-                <img src="img/common/logo.png" alt="兵庫旅館" />
-              </a>
-            </h1>
-            <p class="page-name">兵庫旅館</p>
-            <p class="address-txt">〒661-0000 兵庫県尼崎市○○○○ 0-00-0</p>
+      <div class="container">
+        <div class="f-wrap">
+          <div class="l-box">
+            <div class="logo-box">
+              <h1>
+                <a href="index.html" class="fade">
+                  <img src="img/common/logo.png" alt="兵庫旅館" />
+                </a>
+              </h1>
+              <div class="txt-box">
+                <p class="page-name">兵庫旅館</p>
+                <p class="address-txt">
+                  〒661-0000 <br class="tb" />兵庫県尼崎市○○○○ 0-00-0
+                </p>
+              </div>
+            </div>
+            <div class="tel-box">
+              <p class="tel-ttl">お電話でのお問い合わせ・ご予約はこちら</p>
+              <p class="tel">
+                <a href="tel:00000000000" target="_blank">000-0000-0000</a>
+              </p>
+            </div>
+            <div class="center-text-tb">
+              <a href="#" class="button01" style="width: 200px">空室を見る</a>
+            </div>
           </div>
-          <div class="tel-box">
-            <p class="tel-ttl">お電話でのお問い合わせ・ご予約はこちら</p>
-            <p class="tel">
-              <a href="tel:00000000000" target="_blank">000-0000-0000</a>
-            </p>
-          </div>
-          <div>
-            <a href="#" class="button01" style="width: 200px">空室を見る</a>
+          <div class="r-box">
+            <nav>
+              <ul class="nav-list">
+                <li class="hover-all">
+                  <a href="index.html#link01">兵庫旅館は</a>
+                  <p class="jp-ttl">兵庫旅館は</p>
+                  <p class="en-ttl">ABOUT</p>
+                </li>
+                <li class="hover-all">
+                  <a href="index.html#link02">お部屋</a>
+                  <p class="jp-ttl">お部屋</p>
+                  <p class="en-ttl">ROOM</p>
+                </li>
+                <li class="hover-all">
+                  <a href="index.html#link03">お食事</a>
+                  <p class="jp-ttl">お食事</p>
+                  <p class="en-ttl">MEAL</p>
+                </li>
+                <li class="hover-all">
+                  <a href="index.html#link04">温泉</a>
+                  <p class="jp-ttl">温泉</p>
+                  <p class="en-ttl">SPA</p>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
-        <div class="r-box">
-          <nav>
-            <ul class="nav-list">
-              <li>
-                <a href="#">兵庫旅館は</a>
-                <p class="jp-ttl">兵庫旅館は</p>
-                <p class="en-ttl">ABOUT</p>
-              </li>
-              <li>
-                <a href="#">お部屋</a>
-                <p class="jp-ttl">お部屋</p>
-                <p class="en-ttl">ROOM</p>
-              </li>
-              <li>
-                <a href="#">お食事</a>
-                <p class="jp-ttl">お食事</p>
-                <p class="en-ttl">MEAL</p>
-              </li>
-              <li>
-                <a href="#">温泉</a>
-                <p class="jp-ttl">温泉</p>
-                <p class="en-ttl">SPA</p>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <p class="copy">©︎ HYOUGO RYOKAN</p>
       </div>
-      <p class="copy">©︎ HYOUGO RYOKAN</p>
     </footer>
     <script>
+      var rellax = new Rellax(".js-rellax");
       window.onload = function () {
         $(".key-visual.-top").addClass("-animation");
       };

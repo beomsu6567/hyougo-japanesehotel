@@ -5759,6 +5759,121 @@ body.open {
   overflow: hidden;
 }
 
+footer {
+  border-top: 1px solid #927a79;
+  padding: 50px 0 30px;
+}
+footer .f-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+footer .f-wrap .l-box .logo-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+footer .f-wrap .l-box .logo-box h1 {
+  width: 100px;
+  margin-right: 30px;
+}
+footer .f-wrap .l-box .logo-box .txt-box > .page-name {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+footer .f-wrap .l-box .logo-box .txt-box > .address-txt {
+  font-size: 1.4rem;
+  color: #927a79;
+}
+footer .f-wrap .l-box .tel-box {
+  margin-bottom: 30px;
+}
+footer .f-wrap .l-box .tel-box > .tel-ttl {
+  font-size: 1.6rem;
+}
+footer .f-wrap .l-box .tel-box > .tel > a {
+  font-size: 4rem;
+  text-decoration: none;
+  color: #927a79;
+}
+footer .f-wrap .r-box .nav-list {
+  display: flex;
+}
+footer .f-wrap .r-box .nav-list > * + * {
+  margin-left: 40px;
+}
+footer .f-wrap .r-box .nav-list > li {
+  text-align: center;
+  width: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+footer .f-wrap .r-box .nav-list > li > p {
+  line-height: 1.2;
+  word-break: break-all;
+}
+footer .f-wrap .r-box .nav-list > li > p.jp-ttl {
+  font-size: 1.8rem;
+  margin-bottom: 90px;
+  transition: 0.3s;
+}
+footer .f-wrap .r-box .nav-list > li > p.en-ttl {
+  font-family: "Lora", serif;
+  color: #927a79;
+}
+@media only screen and (min-width: 769px) {
+  footer .f-wrap .r-box .nav-list > li > p.jp-ttl {
+    transition: 0.3s;
+  }
+  footer .f-wrap .r-box .nav-list > li:hover > p.jp-ttl {
+    color: #927a79;
+  }
+}
+footer .copy {
+  font-size: 1.2rem;
+  font-family: "Lora", serif;
+  color: #927a79;
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  footer .f-wrap {
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  footer .f-wrap .l-box .logo-box {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  footer .f-wrap .l-box .logo-box h1 {
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+  footer .f-wrap .l-box .logo-box .txt-box {
+    width: 100%;
+    text-align: center;
+  }
+  footer .f-wrap .l-box .logo-box .txt-box .page-name {
+    margin-bottom: 5px;
+  }
+  footer .f-wrap .l-box .tel-box {
+    text-align: center;
+  }
+  footer .f-wrap .l-box .tel-box .tel-ttl {
+    font-size: 1.4rem;
+  }
+  footer .f-wrap .l-box .tel-box .tel > a {
+    font-size: 3.2rem;
+  }
+  footer .f-wrap .r-box {
+    display: none;
+  }
+  footer .copy {
+    font-size: 1rem;
+  }
+}
+
 .top-index-content {
   margin-bottom: 60px;
 }
