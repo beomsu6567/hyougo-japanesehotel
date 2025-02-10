@@ -61,9 +61,57 @@
 // テーブル
 // --------------------------------------------------
 .table01 {
+  width: 100%;
+  th,
+  td {
+    border: 1px solid $secondary;
+    padding: 20px 30px;
+  }
+  th {
+    text-align: center;
+    color: #fff;
+    background: $primary;
+  }
+  td {
+    background: #fff;
+  }
+  @media only screen and (max-width: $screen-tb) {
+    th,
+    td {
+      padding: 15px 20px;
+    }
+  }
 }
 
 .table02 {
+  width: 100%;
+  th,
+  td {
+    border-top: 1px solid $secondary;
+    border-bottom: 1px solid $secondary;
+    padding: 20px 30px;
+  }
+  th {
+    text-align: center;
+  }
+  @media only screen and (max-width: $screen-tb) {
+    border-top: 1px solid $secondary;
+    th,
+    td {
+      text-align: left;
+      width: 100% !important;
+      display: block;
+      border-top: 0;
+      padding: 20px 20px;
+    }
+    th {
+      border-bottom: 0;
+      padding-bottom: 5px;
+    }
+    td {
+      padding-top: 5px;
+    }
+  }
 }
 
 // --------------------------------------------------
@@ -86,9 +134,24 @@ h3 {
 }
 
 h4 {
+  font-size: 2.5rem;
+  border-bottom: 1px solid $primary;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  @media only screen and (max-width: $screen-tb) {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+  }
 }
 
 h5 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  @media only screen and (max-width: $screen-tb) {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
 }
 
 .en-main-ttl {
@@ -110,9 +173,49 @@ h5 {
 // リスト
 // --------------------------------------------------
 .dot-list {
+  & > * + * {
+    margin-top: 5px;
+  }
+  & > li {
+    position: relative;
+    padding-left: 25px;
+    &:before {
+      content: "●";
+      color: $secondary;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  @media only screen and (max-width: $screen-tb) {
+    & > li {
+      padding-left: 20px;
+    }
+  }
 }
 
 .num-list {
+  counter-reset: section;
+  & > * + * {
+    margin-top: 5px;
+  }
+  & > li {
+    position: relative;
+    padding-left: 25px;
+    &:before {
+      counter-increment: section;
+      content: counter(section) ".";
+      color: $secondary;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  @media only screen and (max-width: $screen-tb) {
+    & > li {
+      padding-left: 20px;
+    }
+  }
 }
 
 .news-list {
@@ -178,5 +281,37 @@ h5 {
         white-space: unset;
       }
     }
+  }
+}
+
+.box01 {
+  border: 1px solid $secondary;
+  padding: 25px 30px;
+  @media only screen and (max-width: $screen-tb) {
+    padding: 20px;
+  }
+}
+
+.box02 {
+  background: #f9f9f9;
+  padding: 25px 30px;
+  @media only screen and (max-width: $screen-tb) {
+    padding: 20px;
+  }
+}
+
+.box03 {
+  background: #fff3f3;
+  padding: 25px 30px;
+  @media only screen and (max-width: $screen-tb) {
+    padding: 20px;
+  }
+}
+
+.time-txt {
+  font-size: 1.4rem;
+  color: $secondary;
+  @media only screen and (max-width: $screen-tb) {
+    font-size: 1.2rem;
   }
 }
